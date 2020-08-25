@@ -1,0 +1,40 @@
+.header {
+  background: #000000;
+  display: block;
+  header {
+    padding: 0;
+  }
+  .navbar-brand {
+    color: #fff;
+  }
+  .nav-link {
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+  .dropdown-toggle::after {
+    margin-left: 0.5rem;
+  }
+
+  .dropdown-menu {
+    margin: 0.5rem 0 0;
+  }
+  .dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    border: solid transparent;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-bottom-color: #fff;
+  }
+}

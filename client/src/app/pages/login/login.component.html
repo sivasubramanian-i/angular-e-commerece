@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-xl-4 offset-xl-4 col-md-6 offset-md-3 loginBox">
+    <h3 class="text-center">{{content['pageTitle']}}</h3>
+    <p *ngIf="message" class="text-center error">{{message}}</p>
+    <ecommerce-form
+      [formFields]="formFields"
+      [formName]="loginForm"
+      [btnName]="content['btn']"
+      (formValue)="getFormValue($event)"
+      ></ecommerce-form>
+      <div class="row">
+          <div class="col-12 text-center">
+              <p>{{content['txt']}} <a routerLink="/register">{{content['link']}}</a>.</p>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+
+.cart-details {
+  background: $color-white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid $boder-color;
+  padding: 0 0 convertEm(20) 0;
+  margin-top: 10px;
+}
+.no-product {
+  background: $color-white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid $boder-color;
+  padding: convertEm(20);
+  margin-top: 10px;
+  h4 {
+    margin: convertEm(10) 0;
+  }
+  img {
+    max-width: 200px;
+  }
+}
+.product-item:last-child {
+  border-bottom: 0;
+}
+.price-details {
+  margin-top: 10px;
+}

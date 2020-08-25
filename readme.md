@@ -1,3 +1,5 @@
+### Building Anuglar E-Commerece Application using Angular + Node JS + Mongo DB and Expres JS
+
 ### Client
 
 ```
@@ -9,7 +11,7 @@
 ### Login Credentials
 
 ```
-siva@mail.com / 123456
+test@mail.com / 123456
 
 ```
 

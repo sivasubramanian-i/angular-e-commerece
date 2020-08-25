@@ -1,0 +1,11 @@
+<div class="loader-bg" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>
+<div class="pageContain" *ngIf="!isLoading">
+  <ecommerce-header
+    [custStatus]="custIsAuthenticated"
+    [custName]="custName"
+  ></ecommerce-header>
+  <ecommerce-alert [alertMsg]="alertMsg"></ecommerce-alert>
+  <router-outlet></router-outlet>
+</div>

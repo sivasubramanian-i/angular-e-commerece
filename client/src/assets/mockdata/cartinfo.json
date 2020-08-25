@@ -1,0 +1,67 @@
+{
+  "_id": {
+    "$oid": "5d9c9eff194fde1edc8ca095"
+  },
+  "cartResponse": [
+    {
+      "currencyCode": "INR",
+      "price": 16790,
+      "countofProduct": 1,
+      "_id": {
+        "$oid": "5d9c9eff194fde1edc8ca096"
+      },
+      "productId": "GL-B201ASPY",
+      "subCategory": "refrigerator",
+      "category": "appliances",
+      "supplierName": "Very Best Screens",
+      "name": "LG 190 L Direct Cool Single Door 5 Star Refrigerator",
+      "productPicUrl": "gl-b201aspy-5-lg-original-imafemyzvrczxtqf.jpeg",
+      "status": "Available",
+      "quantity": 3,
+      "deliveryPrice": 0
+    },
+    {
+      "currencyCode": "INR",
+      "price": 1349,
+      "countofProduct": 1,
+      "_id": {
+        "$oid": "5d9c9f08194fde1edc8ca097"
+      },
+      "productId": "PGMFD",
+      "subCategory": "electric kettle",
+      "category": "appliances",
+      "supplierName": "Very Best Screens",
+      "name": "Prestige PGMFD 01 Grill",
+      "productPicUrl": "prestige-pgmfd-01-original-imafgt9g2agrbzaz.jpeg",
+      "status": "Available",
+      "quantity": 8,
+      "deliveryPrice": 50
+    },
+    {
+      "currencyCode": "INR",
+      "price": 1049,
+      "countofProduct": 1,
+      "_id": {
+        "$oid": "5d9c9f63fd1fbc1a20bacb02"
+      },
+      "productId": "LLMG66",
+      "subCategory": "mixer grinder",
+      "category": "appliances",
+      "supplierName": "Very Best Screens",
+      "name": "Lifelong Dynamite LLMG66 500 W Mixer Grinder",
+      "productPicUrl": "lifelong-llmg66-original-imafhhsxg6xjdydm.jpeg",
+      "status": "Available",
+      "quantity": 8,
+      "deliveryPrice": 50
+    }
+  ],
+  "sessionInfo": {
+    "email": "siva@gmail.com",
+    "isLoggedIn": true,
+    "firstName": "siva",
+    "middleName": "",
+    "lastName": "vasu",
+    "secureToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBpeWFsaUBnbWFpbC5jb20iLCJ1c2VyRm5hbWUiOiJwaXlhbGkiLCJ1c2VyTW5hbWUiOiIiLCJ1c2VyTG5hbWUiOiJkYXMiLCJpYXQiOjE1NzA1NDUzMTYsImV4cCI6MTU3MDU0ODkxNn0.vnncMwr2TSOBRiLXzY2GRz8S4v8HLxsxuhWHW--6BuM"
+  },
+  "__v": 0
+}

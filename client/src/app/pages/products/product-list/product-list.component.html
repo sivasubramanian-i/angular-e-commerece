@@ -1,0 +1,47 @@
+<div class="loader-bg" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>
+
+<div class="container" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-12 productLists">
+      <div class="errorWrapper col-12" *ngIf="errorData !== NULL">
+        <div class="col-sm-12 alert alert-danger">
+          <div class="fa fa-warning"></div>
+          {{ errorData.errorDesc }}
+        </div>
+      </div>
+
+      <div class="row" *ngIf="errorData === NULL">
+        <div
+          class="col-12 col-xl-3 col-md-4 col-sm-6"
+          *ngFor="let prodt of filteredProducts"
+        >
+          <a (click)="productDetails(prodt._id)" class="productBox">
+            <div class="productImg">
+              <img
+                [src]="imgURL + checkPath(prodt.ProductPicUrl)"
+                alt="{{ prodt.Name }}"
+                class="img-thumbnail"
+              />
+            </div>
+            <h6>{{ prodt.Name | truncate: 20 }}</h6>
+            <p>
+              <span
+                class="rate"
+                [innerHTML]="prodt.Price | currency: prodt.CurrencyCode"
+              ></span>
+            </p>
+          </a>
+        </div>
+        <div
+          class="col-12 no-product text-center"
+          *ngIf="filteredProducts.length === 0"
+        >
+          <img [src]="imgURL + nopic" alt="no product" class="img-thumbnail" />
+          <h4>Opps sorry, No products found</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

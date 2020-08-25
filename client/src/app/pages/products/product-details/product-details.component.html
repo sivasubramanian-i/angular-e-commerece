@@ -1,0 +1,50 @@
+<div class="loader-bg" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>
+
+<div class="container product-box" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-12 col-md-5">
+      <img [src]="imgURL + checkPath(productDt.ProductPicUrl)" class="img-thumbnail" />
+
+      <div class="row product-btn-group">
+        <div class="col">
+            <button class="btn btn-block" *ngIf="!isProductInCartPresent" (click)="addtocart()" [ngClass]="{'btn-secondary': statusTxt.type === 'not-available', 'btn-warning': statusTxt.type !== 'not-available' }" [disabled]="statusTxt.type === 'not-available'"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+            <button class="btn btn-block" *ngIf="isProductInCartPresent" (click)="gotocart()" [ngClass]="{'btn-secondary': statusTxt.type === 'not-available', 'btn-warning': statusTxt.type !== 'not-available' }" [disabled]="statusTxt.type === 'not-available'"><i class="fa fa-shopping-cart"></i> Go To Cart</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-block" [ngClass]="{'btn-secondary': statusTxt.type === 'not-available', 'btn-success': statusTxt.type !== 'not-available' }" [disabled]="statusTxt.type === 'not-available'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-7">
+        <h5>{{productDt.Name}}</h5>
+        <h3>
+          <span class="rate" [innerHTML]="productDt.Price | currency:productDt.CurrencyCode"></span>
+        </h3>
+        <span class="quantity" [ngClass]="{ 'alert': statusTxt, 'alert-dark': statusTxt.type === 'not-available', 'alert-danger': statusTxt.type === 'few-available', 'alert-success': statusTxt.type === 'available' }">{{statusTxt.text}}</span>
+        <table class="table">
+          <tr>
+            <td>Category :</td>
+            <td>{{productDt.Category}}</td>
+          </tr>
+          <tr>
+            <td>Subcategory :</td>
+            <td>{{productDt.SubCategory}}</td>
+          </tr>
+          <tr>
+            <td>Supplier Name :</td>
+            <td>{{productDt.SupplierName}}</td>
+          </tr>
+          <tr>
+            <td>Weight :</td>
+            <td>{{productDt.getWeight()}}</td>
+          </tr>
+          <tr>
+            <td>Description :</td>
+            <td>{{productDt.Description}}</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
